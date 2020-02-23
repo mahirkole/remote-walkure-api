@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class WalkurePerson {
 
-  private String name;
-  private String birthday;
-  private String gender;
-  private String bio;
-  private String birthPlace;
-  private String homepage;
-  private String imageUrl;
+    private String name;
+    private String birthday;
+    private String gender;
+    private String bio;
+    private String birthPlace;
+    private String homepage;
+    private String imageUrl;
 }

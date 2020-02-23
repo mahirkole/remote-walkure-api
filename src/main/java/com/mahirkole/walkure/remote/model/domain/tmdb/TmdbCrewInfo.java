@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TmdbCrewInfo {
 
-  private String creditId;
-  private String department;
-  private Integer gender;
-  private Long id;
-  private String job;
-  private String name;
-  private String profilePath;
+    private String creditId;
+    private String department;
+    private Integer gender;
+    private Long id;
+    private String job;
+    private String name;
+    private String profilePath;
 }

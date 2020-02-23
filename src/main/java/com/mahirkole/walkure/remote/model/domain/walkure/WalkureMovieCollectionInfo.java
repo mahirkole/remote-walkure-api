@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class WalkureMovieCollectionInfo {
 
-  private Long id;
-  private String name;
-  private String overview;
-  private String poster;
+    private Long id;
+    private String name;
+    private String overview;
+    private String poster;
 }

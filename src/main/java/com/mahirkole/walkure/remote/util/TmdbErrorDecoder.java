@@ -11,21 +11,21 @@ import org.springframework.web.server.ResponseStatusException;
 @Component
 public class TmdbErrorDecoder implements ErrorDecoder {
 
-  Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
-  @Override
-  public Exception decode(String s, Response response) {
-    switch (response.status()) {
-      case 401:
-        logger.error("Unauthorized Access to remote api");
-        return new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid API Key");
-      case 404:
-        logger.error("Not found on remote api");
+    @Override
+    public Exception decode(String s, Response response) {
+        switch (response.status()) {
+            case 401:
+                logger.error("Unauthorized Access to remote api");
+                return new ResponseStatusException(HttpStatus.UNAUTHORIZED, "Invalid API Key");
+            case 404:
+                logger.error("Not found on remote api");
+                return new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "Resource Not Found on Remote API Server");
+        }
+
         return new ResponseStatusException(
-            HttpStatus.NOT_FOUND, "Resource Not Found on Remote API Server");
+                HttpStatus.INTERNAL_SERVER_ERROR, "There is an issue on Remote API Server");
     }
-
-    return new ResponseStatusException(
-        HttpStatus.INTERNAL_SERVER_ERROR, "There is an issue on Remote API Server");
-  }
 }

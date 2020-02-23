@@ -7,12 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class TmdbCastInfo {
 
-  private Long castId;
-  private String character;
-  private String creditId;
-  private Integer gender;
-  private Long id;
-  private String name;
-  private Integer order;
-  private String profilePath;
+    private String character;
+    private String creditId;
+    private Integer gender;
+    private Long id;
+    private String name;
+    private Integer order;
+    private String profilePath;
 }

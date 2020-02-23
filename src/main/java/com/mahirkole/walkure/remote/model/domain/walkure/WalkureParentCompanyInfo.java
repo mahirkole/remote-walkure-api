@@ -7,11 +7,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class WalkureParentCompanyInfo {
 
-  private Long id;
-  private String name;
-  private String country;
-  private WalkureParentCompanyInfo parent;
-  private String description;
-  private String homepage;
-  private WalkureImageInfo logo;
+    private Long id;
+    private String name;
+    private String country;
+    private WalkureParentCompanyInfo parent;
+    private String description;
+    private String homepage;
+    private WalkureImageInfo logo;
 }
